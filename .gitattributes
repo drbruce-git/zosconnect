@@ -1,0 +1,6 @@
+# line endings
+* text eol=lf
+
+# file encodings for Rocket Git for Z version 2.14.4 and higher
+*.groovy zos-working-tree-encoding=ibm-1047 git-encoding=utf-8
+build/build.properties zos-working-tree-encoding=ibm-1047 git-encoding=utf-8
