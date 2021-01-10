@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns:ns2="http://www.ibm.com/ims/Transaction">
+    <shallow>true</shallow>
+    <serviceName>zosconnectmachieldemo</serviceName>
+    <serviceType>ims-rest</serviceType>
+    <resourceType>TRAN</resourceType>
+    <status>1</status>
+    <conversionType>3</conversionType>
+    <dataProtocol>0</dataProtocol>
+    <serviceInputInterface>
+        <metadataName>current-accounts-delete-service-request.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="CA-RESTAPI">
+                    <interfaceField included="Y" fieldName="APIIN">
+                        <field included="Y" fieldName="CUSTOMER_ACCOUNTS_REQUEST">
+                            <field included="N" fieldName="CRUD_IND" defaultValue="D" isHex="false"/>
+                            <field included="Y" fieldName="PATH_PARAMETERS">
+<field included="Y" fieldName="IBAN"/>
+<field included="Y" fieldName="CCY"/>
+<field included="N" fieldName="YEAR_MONTH"/>
+<field included="N" fieldName="NTRY_SEQ_NB"/>
+                            </field>
+                            <field included="N" fieldName="QUERY_PARAMETERS">
+<field included="N" fieldName="IBAN"/>
+<field included="N" fieldName="NTRY_SEQ_NB"/>
+<field included="N" fieldName="YEAR_MONTH"/>
+<field included="N" fieldName="MAXIMUM_TO_RETURN"/>
+                            </field>
+                            <field included="N" fieldName="BODY_PARAMETERS">
+<field included="N" fieldName="CUSTOMER_ACCOUNTS">
+    <field included="N" fieldName="IBAN"/>
+    <field included="N" fieldName="CCY"/>
+    <field included="N" fieldName="BAL"/>
+</field>
+<field included="N" fieldName="CUSTOMER_ACCOUNTS_ENTRIES">
+    <field included="N" fieldName="YEAR_MONTH"/>
+    <field included="N" fieldName="NTRY_SEQ_NB"/>
+    <field included="N" fieldName="BOOKG_AMT_NMRC"/>
+    <field included="N" fieldName="BOOKG_CDT_DBT_IND"/>
+    <field included="N" fieldName="BOOKG_DT"/>
+</field>
+                            </field>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceInputInterface>
+    <serviceOutputInterface>
+        <metadataName>current-accounts-delete-service-response.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="CA-RESTAPI">
+                    <interfaceField included="Y" fieldName="APIOUT">
+                        <field included="Y" fieldName="CUSTOMER_ACCOUNTS_RESPONSE">
+                            <field included="N" fieldName="SINGLE_RESPONSE">
+<field included="N" fieldName="CUSTOMER_ACCOUNTS">
+    <field included="N" fieldName="BAL"/>
+</field>
+<field included="N" fieldName="CUSTOMER_ACCOUNTS_ENTRIES">
+    <field included="N" fieldName="BOOKG_AMT_NMRC"/>
+    <field included="N" fieldName="BOOKG_CDT_DBT_IND"/>
+    <field included="N" fieldName="BOOKG_DT"/>
+</field>
+                            </field>
+                            <field included="N" fieldName="MULTIPLE_RESPONSE">
+<field included="N" fieldName="CUSTOMER_ACCOUNTS">
+    <field included="N" fieldName="IBAN"/>
+    <field included="N" fieldName="CCY"/>
+    <field included="N" fieldName="BAL"/>
+</field>
+<field included="N" fieldName="CUSTOMER_ACCOUNTS_ENTRIES">
+    <field included="N" fieldName="YEAR_MONTH"/>
+    <field included="N" fieldName="NTRY_SEQ_NB"/>
+    <field included="N" fieldName="BOOKG_AMT_NMRC"/>
+    <field included="N" fieldName="BOOKG_CDT_DBT_IND"/>
+    <field included="N" fieldName="BOOKG_DT"/>
+</field>
+                            </field>
+                            <field included="Y" fieldName="RESPONSEMESSAGE"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceOutputInterface>
+    <applicationDataStructureType>Map</applicationDataStructureType>
+    <messageVisitorRuntimeType>CICS_CHANNEL</messageVisitorRuntimeType>
+    <ccsid>IBM037</ccsid>
+    <totalExecCount>0</totalExecCount>
+    <failedCount>0</failedCount>
+    <trancodeOverride>PL600</trancodeOverride>
+    <trimOutputLeadingWhitespace>false</trimOutputLeadingWhitespace>
+    <trimOutputTrailingWhitespace>true</trimOutputTrailingWhitespace>
+    <escapeOutputControlCharacters>false</escapeOutputControlCharacters>
+    <initializeInputFields>false</initializeInputFields>
+    <omitOutputFieldsByValue>false</omitOutputFieldsByValue>
+    <omitOutputFieldsByValueByte>0x00</omitOutputFieldsByValueByte>
+    <omitOutputEmptyTags>false</omitOutputEmptyTags>
+    <enforceMinArrayOccurrence>false</enforceMinArrayOccurrence>
+    <enforceMinArrayOccurrenceResponse>false</enforceMinArrayOccurrenceResponse>
+    <ldsStartsWithLLZZTRANCODE>false</ldsStartsWithLLZZTRANCODE>
+    <ldsStartsWithLLZZ>false</ldsStartsWithLLZZ>
+</service>

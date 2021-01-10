@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="Channel" direction="0" serviceType="CICS_CHANNEL">
+    <message id="1" name="Channel">
+        <segment id="1" name="" originalName="CA-RESTAPI" containerType="BIT" required="Y">
+            <field name="APIIN" originalName="APIIN" included="Y" path="APIIN">
+                <startPos>1</startPos>
+                <bytes>293</bytes>
+                <maxBytes>293</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CUSTOMER_ACCOUNTS_REQUEST" originalName="CUSTOMER_ACCOUNTS_REQUEST" included="Y" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST">
+                    <startPos>1</startPos>
+                    <bytes>293</bytes>
+                    <maxBytes>293</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CRUD_IND" originalName="CRUD_IND" included="N" defaultValue="D" isHex="false" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.CRUD_IND" codepageConversion="Y">
+                        <startPos>1</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <remarks></remarks>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="PATH_PARAMETERS" originalName="PATH_PARAMETERS" included="Y" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.PATH_PARAMETERS">
+                        <startPos>2</startPos>
+                        <bytes>86</bytes>
+                        <maxBytes>86</maxBytes>
+                        <marshaller alignment="NATURAL"/>
+                        <applicationDatatype datatype="STRUCT"/>
+                        <field name="IBAN" originalName="IBAN" included="Y" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.PATH_PARAMETERS.IBAN">
+                            <startPos>2</startPos>
+                            <bytes>68</bytes>
+                            <maxBytes>68</maxBytes>
+                            <marshaller encoding="UTF-16BE"/>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="CCY" originalName="CCY" included="Y" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.PATH_PARAMETERS.CCY">
+                            <startPos>70</startPos>
+                            <bytes>6</bytes>
+                            <maxBytes>6</maxBytes>
+                            <marshaller encoding="UTF-16BE"/>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="YEAR_MONTH" originalName="YEAR_MONTH" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.PATH_PARAMETERS.YEAR_MONTH">
+                            <startPos>76</startPos>
+                            <bytes>4</bytes>
+                            <maxBytes>4</maxBytes>
+                            <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                            <applicationDatatype datatype="INT" precision="9"/>
+                        </field>
+                        <field name="NTRY_SEQ_NB" originalName="NTRY_SEQ_NB" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.PATH_PARAMETERS.NTRY_SEQ_NB">
+                            <startPos>80</startPos>
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                            <applicationDatatype datatype="LONG" precision="18"/>
+                        </field>
+                    </field>
+                    <field name="QUERY_PARAMETERS" originalName="QUERY_PARAMETERS" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.QUERY_PARAMETERS">
+                        <startPos>88</startPos>
+                        <bytes>82</bytes>
+                        <maxBytes>82</maxBytes>
+                        <marshaller alignment="NATURAL"/>
+                        <applicationDatatype datatype="STRUCT"/>
+                        <field name="IBAN" originalName="IBAN" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.QUERY_PARAMETERS.IBAN">
+                            <startPos>88</startPos>
+                            <bytes>68</bytes>
+                            <maxBytes>68</maxBytes>
+                            <marshaller encoding="UTF-16BE"/>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="NTRY_SEQ_NB" originalName="NTRY_SEQ_NB" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.QUERY_PARAMETERS.NTRY_SEQ_NB">
+                            <startPos>156</startPos>
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                            <applicationDatatype datatype="LONG" precision="18"/>
+                        </field>
+                        <field name="YEAR_MONTH" originalName="YEAR_MONTH" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.QUERY_PARAMETERS.YEAR_MONTH">
+                            <startPos>164</startPos>
+                            <bytes>4</bytes>
+                            <maxBytes>4</maxBytes>
+                            <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                            <applicationDatatype datatype="INT" precision="9"/>
+                        </field>
+                        <field name="MAXIMUM_TO_RETURN" originalName="MAXIMUM_TO_RETURN" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.QUERY_PARAMETERS.MAXIMUM_TO_RETURN">
+                            <startPos>168</startPos>
+                            <bytes>2</bytes>
+                            <maxBytes>2</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="2" scale="0"/>
+                        </field>
+                    </field>
+                    <field name="BODY_PARAMETERS" originalName="BODY_PARAMETERS" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS">
+                        <startPos>170</startPos>
+                        <bytes>124</bytes>
+                        <maxBytes>124</maxBytes>
+                        <applicationDatatype datatype="STRUCT"/>
+                        <field name="CUSTOMER_ACCOUNTS" originalName="CUSTOMER_ACCOUNTS" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS">
+                            <startPos>170</startPos>
+                            <bytes>84</bytes>
+                            <maxBytes>84</maxBytes>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="IBAN" originalName="IBAN" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS.IBAN">
+<startPos>170</startPos>
+<bytes>68</bytes>
+<maxBytes>68</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="CCY" originalName="CCY" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS.CCY">
+<startPos>238</startPos>
+<bytes>6</bytes>
+<maxBytes>6</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="BAL" originalName="BAL" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS.BAL">
+<startPos>244</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                        </field>
+                        <field name="CUSTOMER_ACCOUNTS_ENTRIES" originalName="CUSTOMER_ACCOUNTS_ENTRIES" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES">
+                            <startPos>254</startPos>
+                            <bytes>40</bytes>
+                            <maxBytes>40</maxBytes>
+                            <marshaller alignment="NATURAL"/>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="YEAR_MONTH" originalName="YEAR_MONTH" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES.YEAR_MONTH">
+<startPos>254</startPos>
+<bytes>4</bytes>
+<maxBytes>4</maxBytes>
+<marshaller isNativeInteger="N" alignment="NATURAL"/>
+<applicationDatatype datatype="INT" precision="9"/>
+                            </field>
+                            <field name="NTRY_SEQ_NB" originalName="NTRY_SEQ_NB" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES.NTRY_SEQ_NB">
+<startPos>258</startPos>
+<bytes>8</bytes>
+<maxBytes>8</maxBytes>
+<marshaller isNativeInteger="N" alignment="NATURAL"/>
+<applicationDatatype datatype="LONG" precision="18"/>
+                            </field>
+                            <field name="BOOKG_AMT_NMRC" originalName="BOOKG_AMT_NMRC" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_AMT_NMRC">
+<startPos>266</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                            <field name="BOOKG_CDT_DBT_IND" originalName="BOOKG_CDT_DBT_IND" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_CDT_DBT_IND">
+<startPos>276</startPos>
+<bytes>8</bytes>
+<maxBytes>8</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="BOOKG_DT" originalName="BOOKG_DT" included="N" path="APIIN.CUSTOMER_ACCOUNTS_REQUEST.BODY_PARAMETERS.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_DT">
+<startPos>284</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                        </field>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

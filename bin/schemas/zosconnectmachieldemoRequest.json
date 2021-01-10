@@ -1,0 +1,39 @@
+{
+  "type" : "object",
+  "properties" : {
+    "zosconnectmachieldemoOperation" : {
+      "type" : "object",
+      "properties" : {
+        "CA-RESTAPI" : {
+          "type" : "object",
+          "properties" : {
+            "APIIN" : {
+              "type" : "object",
+              "properties" : {
+                "CUSTOMER_ACCOUNTS_REQUEST" : {
+                  "type" : "object",
+                  "properties" : {
+                    "PATH_PARAMETERS" : {
+                      "type" : "object",
+                      "properties" : {
+                        "IBAN" : {
+                          "maxLength" : 34,
+                          "type" : "string"
+                        },
+                        "CCY" : {
+                          "maxLength" : 3,
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required" : [ "CA-RESTAPI" ]
+    }
+  }
+}

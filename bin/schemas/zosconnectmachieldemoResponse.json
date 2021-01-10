@@ -1,0 +1,30 @@
+{
+  "type" : "object",
+  "properties" : {
+    "zosconnectmachieldemoOperationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "CA-RESTAPI" : {
+          "type" : "object",
+          "properties" : {
+            "APIOUT" : {
+              "type" : "object",
+              "properties" : {
+                "CUSTOMER_ACCOUNTS_RESPONSE" : {
+                  "type" : "object",
+                  "properties" : {
+                    "RESPONSEMESSAGE" : {
+                      "maxLength" : 512,
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required" : [ "CA-RESTAPI" ]
+    }
+  }
+}

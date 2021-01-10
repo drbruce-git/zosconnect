@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="Channel" direction="0" serviceType="CICS_CHANNEL">
+    <message id="1" name="Channel">
+        <segment id="1" name="" originalName="CA-RESTAPI" containerType="BIT" required="Y">
+            <field name="APIOUT" originalName="APIOUT" included="Y" path="APIOUT">
+                <startPos>1</startPos>
+                <bytes>3542</bytes>
+                <maxBytes>3542</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CUSTOMER_ACCOUNTS_RESPONSE" originalName="CUSTOMER_ACCOUNTS_RESPONSE" included="Y" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE">
+                    <startPos>1</startPos>
+                    <bytes>3542</bytes>
+                    <maxBytes>3542</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="SINGLE_RESPONSE" originalName="SINGLE_RESPONSE" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE">
+                        <startPos>1</startPos>
+                        <bytes>38</bytes>
+                        <maxBytes>38</maxBytes>
+                        <applicationDatatype datatype="STRUCT"/>
+                        <field name="CUSTOMER_ACCOUNTS" originalName="CUSTOMER_ACCOUNTS" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS">
+                            <startPos>1</startPos>
+                            <bytes>10</bytes>
+                            <maxBytes>10</maxBytes>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="BAL" originalName="BAL" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS.BAL">
+<startPos>1</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                        </field>
+                        <field name="CUSTOMER_ACCOUNTS_ENTRIES" originalName="CUSTOMER_ACCOUNTS_ENTRIES" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES">
+                            <startPos>11</startPos>
+                            <bytes>28</bytes>
+                            <maxBytes>28</maxBytes>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="BOOKG_AMT_NMRC" originalName="BOOKG_AMT_NMRC" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_AMT_NMRC">
+<startPos>11</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                            <field name="BOOKG_CDT_DBT_IND" originalName="BOOKG_CDT_DBT_IND" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_CDT_DBT_IND">
+<startPos>21</startPos>
+<bytes>8</bytes>
+<maxBytes>8</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="BOOKG_DT" originalName="BOOKG_DT" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.SINGLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_DT">
+<startPos>29</startPos>
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                        </field>
+                    </field>
+                    <field name="MULTIPLE_RESPONSE" originalName="MULTIPLE_RESPONSE" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE" minOccurs="20" maxOccurs="20">
+                        <startPos>39</startPos>
+                        <bytes>2480</bytes>
+                        <maxBytes>2480</maxBytes>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="CUSTOMER_ACCOUNTS" originalName="CUSTOMER_ACCOUNTS" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS">
+                            <bytes>84</bytes>
+                            <maxBytes>84</maxBytes>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="IBAN" originalName="IBAN" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS.IBAN">
+<bytes>68</bytes>
+<maxBytes>68</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="CCY" originalName="CCY" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS.CCY">
+<bytes>6</bytes>
+<maxBytes>6</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="BAL" originalName="BAL" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS.BAL">
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                        </field>
+                        <field name="CUSTOMER_ACCOUNTS_ENTRIES" originalName="CUSTOMER_ACCOUNTS_ENTRIES" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES">
+                            <bytes>40</bytes>
+                            <maxBytes>40</maxBytes>
+                            <marshaller alignment="NATURAL"/>
+                            <applicationDatatype datatype="STRUCT"/>
+                            <field name="YEAR_MONTH" originalName="YEAR_MONTH" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.YEAR_MONTH">
+<bytes>4</bytes>
+<maxBytes>4</maxBytes>
+<marshaller isNativeInteger="N" alignment="NATURAL"/>
+<applicationDatatype datatype="INT" precision="9"/>
+                            </field>
+                            <field name="NTRY_SEQ_NB" originalName="NTRY_SEQ_NB" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.NTRY_SEQ_NB">
+<bytes>8</bytes>
+<maxBytes>8</maxBytes>
+<marshaller isNativeInteger="N" alignment="NATURAL"/>
+<applicationDatatype datatype="LONG" precision="18"/>
+                            </field>
+                            <field name="BOOKG_AMT_NMRC" originalName="BOOKG_AMT_NMRC" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_AMT_NMRC">
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<marshaller isSigned="Y">
+    <typeConverter>PACKEDDECIMAL</typeConverter>
+</marshaller>
+<applicationDatatype datatype="DECIMAL" precision="18" scale="0"/>
+                            </field>
+                            <field name="BOOKG_CDT_DBT_IND" originalName="BOOKG_CDT_DBT_IND" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_CDT_DBT_IND">
+<bytes>8</bytes>
+<maxBytes>8</maxBytes>
+<marshaller encoding="UTF-16BE"/>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                            <field name="BOOKG_DT" originalName="BOOKG_DT" included="N" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.MULTIPLE_RESPONSE.CUSTOMER_ACCOUNTS_ENTRIES.BOOKG_DT">
+<bytes>10</bytes>
+<maxBytes>10</maxBytes>
+<applicationDatatype datatype="CHAR"/>
+                            </field>
+                        </field>
+                    </field>
+                    <field name="RESPONSEMESSAGE" originalName="RESPONSEMESSAGE" included="Y" path="APIOUT.CUSTOMER_ACCOUNTS_RESPONSE.RESPONSEMESSAGE">
+                        <startPos>2519</startPos>
+                        <bytes>1024</bytes>
+                        <maxBytes>1024</maxBytes>
+                        <marshaller encoding="UTF-16BE"/>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>
